@@ -1,5 +1,4 @@
 import excuseModel from "../../models/excuseModel.js";
-//import userController from "./userController.js"
 
 const getAll = async()=> {
     try {
