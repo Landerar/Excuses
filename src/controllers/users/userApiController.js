@@ -1,7 +1,7 @@
 import userController from "./userController.js";
 
 
-const getALl= async(req,res)=>{
+const getAll= async(req,res)=>{
     const users = await userController.getAll();
     res.json({data:users});
 }
@@ -36,7 +36,7 @@ const remove = async(req,res)=>{
 }
 
 export default{
-    getALl,
+    getAll,
     getById,
     getByProperty,
     create,

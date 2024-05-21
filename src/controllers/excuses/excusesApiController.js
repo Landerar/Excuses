@@ -1,6 +1,6 @@
-import excusesController from "./excusesController"
+import excusesController from "./excusesController.js"
 
-const getALl= async(req,res)=>{
+const getAll= async(req,res)=>{
     const excuses = await excusesController.getAll();
     res.json({data:excuses});
 }
@@ -35,7 +35,7 @@ const remove = async(req,res)=>{
 }
 
 export default{
-    getALl,
+    getAll,
     getById,
     getByProperty,
     create,
