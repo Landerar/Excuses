@@ -7,7 +7,10 @@ dotenv.config();
 const CONTAINER_PORT = 3000;
 
 const app = express();
+app.use(express.json())
+
 connectDB();
+
 app.get("/",(req,res)=>{
     res.json({message: "Hello World"});
 })

@@ -1,5 +1,31 @@
 import excuseModel from "../../models/excuseModel.js";
 
+const generate = async()=>{
+    const intros = await getByProperty("type","introduccion")
+    const intro = chooseRandom(intros)
+
+    const sujs = await getByProperty("type","sujeto")
+    const suj = chooseRandom(sujs)
+
+    const verbs = await getByProperty("type","verbo")
+    const verb = chooseRandom(verbs)
+
+    const objts = await getByProperty("type","objeto")
+    const objt = chooseRandom(objts)
+
+    const justs = await getByProperty("type","justificacion")
+    const just = chooseRandom(justs)
+
+    const excuse = `${intro.text} ${suj.text} ${verb.text} ${objt.text} ${just.text}`;
+    return excuse
+}
+
+const chooseRandom = (array) =>{
+    const randomNumber = Math.floor(Math.random() * array.length)
+    const randomElement = array[randomNumber]
+    return randomElement
+}
+
 const getAll = async()=> {
     try {
         const excuses = await excuseModel.find();
@@ -58,6 +84,7 @@ const remove = async(id) =>{
 }
 
 export const functions = {
+    generate,
     getAll,
     getById,
     getByProperty,
