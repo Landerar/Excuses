@@ -36,11 +36,18 @@ const update = async(req,res)=>{
 
 const remove = async(req,res)=>{
     const id = rq.params.id;
-    const excuse = await excusesController.remove(id,);
+    const excuse = await excusesController.remove(id);
+    res.json({data:excuse});
+}
+
+const verify = async(req,res)=>{
+    const id = req.params.id;
+    const excuse = await excusesController.verify(id);
     res.json({data:excuse});
 }
 
 export default{
+    verify,
     generate,
     getAll,
     getById,

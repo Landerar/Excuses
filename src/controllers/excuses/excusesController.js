@@ -63,6 +63,21 @@ const create = async(data) =>{
     }
 }
 
+const verify = async(id) =>{
+    try {
+        const data = {
+            verified: true
+        }
+        await excuseModel.findByIdAndUpdate(id,data);
+
+        const excuse = await excuseModel.findById(id);
+        return excuse;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}
+
 const update = async(id,data) =>{
     try {
         const excuse = await excuseModel.findByIdAndUpdate(id,data);
@@ -84,6 +99,7 @@ const remove = async(id) =>{
 }
 
 export const functions = {
+    verify,
     generate,
     getAll,
     getById,

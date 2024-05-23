@@ -51,6 +51,8 @@ const remove = async(req,res)=>{
 }
 
 export default{
+    register,
+    login,
     getAll,
     getById,
     getByProperty,

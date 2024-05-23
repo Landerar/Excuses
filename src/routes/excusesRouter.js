@@ -11,5 +11,6 @@ router.get("/:id", excusesApiController.getById);
 router.post("/", excusesApiController.create);
 router.put("/:id",excusesApiController.update);
 router.delete("/:id",excusesApiController.remove);
+router.post("/:id/verify",excusesApiController.verify);
 
 export default router;

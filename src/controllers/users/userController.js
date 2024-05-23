@@ -50,11 +50,12 @@ const login = async(data)=>{
             if(!user){
                 return{error:"No existe el usuario",status:400};
             }
-            const isPasswordCorrect = await bcrypt.comparte(password,user.password);
+            const isPasswordCorrect = await bcrypt.compare(password,user.password);
             if(!isPasswordCorrect){
                 return {error:"Combinación de usuario y contraseña erroneos", status:400};
             }
-
+            const token = jwt.sign({id:user._id, username:user.username, role:user.role},process.env.JWT_SECRET);
+            return {token};
 
      } catch (error) {
     console.error(error);
@@ -82,6 +83,8 @@ const register = async(data) =>{
 
 const create = async(data) =>{
     try {
+        const hash = await bcrypt.hash(data.password,10);
+        data.password = hash;
         const user = await userModel.create(data);
         return user;
     } catch (error) {
