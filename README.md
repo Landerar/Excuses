@@ -72,7 +72,3 @@ Las funciones relacionadas con las excusas y los usuarios se exportan para ser u
 ## Contribuciones
 
 ¡Las contribuciones son bienvenidas! Por favor, abre un issue o un pull request para mejorar este proyecto.
-
-## Licencia
-
-Este proyecto está licenciado bajo la [MIT License](LICENSE).
