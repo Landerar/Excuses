@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const LoginForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -29,8 +30,9 @@ const LoginForm = () => {
     }
 };
     return (
-        <div>
+        <div className="login-form">
         <h1>Login</h1>
+        <p>¿Listo para entrar y crear las mejores excusas jamás vistas?</p>
         <form onSubmit={handleLogin}>
           <div>
             <label>Email:</label>
@@ -51,6 +53,7 @@ const LoginForm = () => {
           {error && <p>{error}</p>}
           <button type="submit">Login</button>
         </form>
+        <p>¡No te preocupes, tus excusas estarán a salvo con nosotros!</p>
       </div>
     );
 };

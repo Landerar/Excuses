@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 const RegisterForm = () => {
     const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
@@ -36,8 +37,9 @@ const RegisterForm = () => {
     };
 
     return (
-        <div>
+        <div className="register-form">
           <h1>Register</h1>
+          <p>¿Nuevo aquí? Únete y comienza a crear excusas increíbles.</p>
           <form onSubmit={handleRegister}>
             <div>
               <label>Email:</label>
@@ -74,6 +76,7 @@ const RegisterForm = () => {
             {error && <p>{error}</p>}
             <button type="submit">Register</button>
           </form>
+          <p>Conviértete en un maestro de las excusas en tan solo unos pasos.</p>
         </div>
     ); 
 };
