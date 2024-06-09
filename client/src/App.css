@@ -1,0 +1,189 @@
+/* Global Styles */
+body {
+  font-family: 'Permanent Marker', cursive;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444;
+  margin-top: 0;
+}
+
+body::before {
+  content: "";
+  background: url('src/assets/m2i8i8G6A0G6m2Z5.png') no-repeat;
+  background-position: center right; /* Positioned to the center left */
+  background-size: 40%; /* Adjust as needed */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2; /* Adjust the opacity as needed */
+  z-index: -1; /* Ensures it is behind all content */
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #333;
+  padding: 0.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main content should have a margin to account for the navbar */
+.main-content {
+  margin-top: 80px; /* Adjust this value to match the height of the navbar */
+  padding: 20px;
+}
+
+/* Button Styles */
+button {
+  font-family: 'Permanent Marker', cursive;
+  padding: 10px 20px;
+  background-color: #333;
+  color: rgb(252, 252, 252);
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Input and Select Styles */
+input, select {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  width: calc(100% - 22px);
+}
+
+/* Form Styles */
+form {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Excuse List Styles */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background: white;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Component Specific Styles */
+.excuse-generator, .login-form, .register-form, .add-excuse-part {
+  text-align: center;
+  padding: 20px;
+}
+
+.excuse-generator h1, .login-form h1, .register-form h1, .add-excuse-part h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.excuse-generator p, .login-form p, .register-form p, .add-excuse-part p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.generated-excuse {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0 1rem;
+  }
+
+  button {
+    width: auto;
+  }
+
+  form {
+    max-width: 400px;
+  }
+
+  .main-content {
+    margin-top: 80px; /* Adjust this value to match the height of the navbar */
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .excuse-generator h1, .login-form h1, .register-form h1, .add-excuse-part h1 {
+    font-size: 2.5rem;
+  }
+
+  .excuse-generator p, .login-form p, .register-form p, .add-excuse-part p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    margin-top: 100px;
+    padding: 30px;
+  }
+
+  form {
+    padding: 2rem;
+  }
+}
