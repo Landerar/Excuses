@@ -1,5 +1,4 @@
 import {Router} from "express";
-
 import userRouter from "./userRouter.js";
 import excusesRouter from "./excusesRouter.js";
 import authRouter from "./authRouter.js";

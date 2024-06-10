@@ -8,7 +8,7 @@ const ExcuseGenerator = () => {
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/excuses/generate`);
       const data = await response.json();
-      setExcuse(data);
+      setExcuse(data.data);
     } catch (error) {
       console.error('Error generating excuse', error);
     }

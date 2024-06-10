@@ -15,7 +15,7 @@ const RegisterForm = () => {
             return;
         }
      try {
-        const response = await fetch (`${import.meta.env.VITE_API_URL}/users/register`, {
+        const response = await fetch (`${import.meta.env.VITE_API_URL}/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
